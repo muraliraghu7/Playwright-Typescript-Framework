@@ -1,0 +1,27 @@
+{
+  "name": "playwright-typescript-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.1.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.2",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.2.1"
+  },
+  "scripts": {
+    "test": "cross-env ENV_PATH=.env npx playwright test --headed",
+  "test:qa": "cross-env ENV_PATH=.env.qa npx playwright test",
+  "test:prod": "cross-env ENV_PATH=.env.prod npx playwright test",
+    "allG": "allure generate ./allure-results --clean -o report",
+    "allO": "allure open report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
